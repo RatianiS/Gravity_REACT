@@ -1,0 +1,34 @@
+.partners_container {
+    margin-top: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 700px;
+}
+
+.partners_container_h2 {
+    display: flex;
+    flex-direction: column;
+    font-size: 60px;
+}
+
+@media screen and (max-width: 1000px) {
+    .partners_container_h2 {
+        font-size: 46px;
+    }
+    .partners_container_img {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .partners_container {
+        flex-direction: column;
+    }
+    .partners_container_h2 {
+        font-size: 46px;
+    }
+    .partners_container_img {
+        width: 260px;
+    }
+}

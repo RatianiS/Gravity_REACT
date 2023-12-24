@@ -1,0 +1,114 @@
+.stats_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+.Stats_head_titles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 500px;
+}
+.Stats_head_titles_h2 {
+    font-size: 56px;
+}
+.Stats_head_titles_p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stats_grid_container {
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 260px);
+    grid-template-rows: repeat(2, 180px);
+    justify-items: center;
+    align-items: center;
+}
+.stats_grid_container_items {
+    width: 260px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.stats_grid_container_items_p {
+    font-size: 38px;
+    font-weight: 700;
+}
+.stats_grid_container_items_2p {
+    font-size: 19px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (max-width: 1000px) {
+    .Stats_head_titles {
+        width: 80%;
+    }
+
+    .stats_grid_container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .stats_grid_container_items {
+        width: 200px;
+        height: 130px;
+        gap: 15px;
+        border-bottom: 2px solid linear-gradient(#665dcd, #5fa4e6, #d2ab67);
+    }
+    .stats_grid_container_items_p {
+        font-size: 30px;
+        font-weight: 700;
+    }
+    .Stats_head_titles_h2 {
+        font-size: 46px;
+    }
+
+    .stats_grid_container_items::after {
+        content: "";
+        display: block;
+        height: 2px;
+        width: 100%;
+        background: linear-gradient(to right, #665dcd, #5fa4e6, #d2ab67);
+        margin-top: 17px;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .Stats_head_titles_h2 {
+        font-size: 36px;
+    }
+
+    .Stats_head_titles_p {
+        font-size: 12px;
+    }
+
+    .stats_grid_container_items::after {
+        content: "";
+        display: block;
+        height: 2px;
+        width: 100%;
+        background: linear-gradient(to right, #665dcd, #5fa4e6, #d2ab67);
+        margin-top: 17px;
+    }
+    .Stats_head_titles {
+        width: 90%;
+    }
+
+    .stats_grid_container {
+        grid-template-columns: 1fr;
+    }
+    .stats_grid_container_items_p {
+        font-size: 30px;
+        font-weight: 700;
+    }
+}

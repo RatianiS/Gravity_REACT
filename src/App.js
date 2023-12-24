@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Header from "./components/header/header";
+import Title from "./components/BalancingCryptoTitle/Title";
+import Stats from "./components/stats/stats";
+import MiddleCryptMarket from "./components/middle-crypt-market/MiddleCryptMarket";
+import Ourpartners from "./components/Ourpartners/Ourpartners";
+import Jointeam from "./components/jointeam/Jointeam";
+import Footer from "./components/footer/Footer";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <header className="app_header_container">
+                <Header />
+                <div className="app_header_container_title">
+                    <Title />
+                </div>
+            </header>
+
+            <Stats />
+            <MiddleCryptMarket />
+            <Ourpartners />
+            <Jointeam />
+            <Footer />
+        </div>
+    );
 }
 
 export default App;
